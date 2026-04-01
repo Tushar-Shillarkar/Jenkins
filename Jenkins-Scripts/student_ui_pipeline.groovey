@@ -14,7 +14,7 @@ pipeline {
                 echo 'this is pull stage'
                sh '''mvn clean package
                 sudo mv /home/ubuntu/workspace/webserver/target/studentapp-2.2-SNAPSHOT.war /home/ubuntu/workspace/webserver/target/student.war
-                sudo aws s3 cp /home/ubuntu/workspace/webserver/target/student.war s3://cbzapp'''
+                sudo aws s3 cp /home/ubuntu/workspace/webserver/target/student.war s3://cbz-jenkins-11'''
             }
         }
         stage('test') {
